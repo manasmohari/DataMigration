@@ -1,0 +1,10 @@
+C:\GitHub\DataMigration\DataMigration\bin\Debug\DataMigration.exe.config
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.csprojResolveAssemblyReference.cache
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.Migrate.resources
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.Properties.Resources.resources
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.csproj.GenerateResource.Cache
+C:\GitHub\DataMigration\DataMigration\bin\Debug\ConfigItems.xml
+C:\GitHub\DataMigration\DataMigration\bin\Debug\DataMigration.exe
+C:\GitHub\DataMigration\DataMigration\bin\Debug\DataMigration.pdb
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.exe
+C:\GitHub\DataMigration\DataMigration\obj\Debug\DataMigration.pdb

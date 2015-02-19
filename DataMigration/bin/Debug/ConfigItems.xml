@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigItems>
+  <Items>
+    <Item name="Categories">
+      <Tables>
+        <Table name="CAT">
+          <Columns>
+            <Column name="N_CAT"></Column>
+          </Columns>
+        </Table>
+        <Table name="CAT_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_CAT" mappedtable="CAT" mappedcolumn="N_CAT"></Column>
+              <Column name="N_APP" mappedtable="CAT" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="CAT" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_CAT_DSPLY"></Column>
+            <Column name="T_CAT"></Column>
+          </Columns>
+        </Table>
+        <Table name="REF_DATA_TYP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_REF_DATA_TYP" mappedtable="CAT" mappedcolumn="C_REF_DATA_TYP"></Column>
+              <Column name="N_APP" mappedtable="CAT" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="CAT" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_REF_DATA_TYP"></Column>
+          </Columns>
+        </Table>
+        <Table name="REF_DATA_TYP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_REF_DATA_TYP" mappedtable="REF_DATA_TYP" mappedcolumn="C_REF_DATA_TYP"></Column>
+              <Column name="V_LCL_ID" mappedtable="CAT_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="REF_DATA_TYP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="REF_DATA_TYP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_REF_DATA_TYP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="CAT" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="CAT" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+    <Item name="DataItems">
+      <Tables>
+        <Table name="DATAITEM">
+          <Columns>
+            <Column name="N_DATAITEM"></Column>
+          </Columns>
+        </Table>
+        <Table name="DATAITEM_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_DATAITEM" mappedtable="DATAITEM" mappedcolumn="N_DATAITEM"></Column>
+              <Column name="N_APP" mappedtable="DATAITEM" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="DATAITEM" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_DATAITEM_DSPLY"></Column>
+            <Column name="T_DATAITEM"></Column>
+          </Columns>
+        </Table>
+        <Table name="DATAITEM_TYP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_DATAITEM_TYP" mappedtable="DATAITEM" mappedcolumn="C_DATAITEM_TYP"></Column>
+              <Column name="N_APP" mappedtable="DATAITEM" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="DATAITEM" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_DATAITEM_TYP"></Column>
+          </Columns>
+        </Table>
+        <Table name="DATAITEM_TYP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_DATAITEM_TYP" mappedtable="DATAITEM_TYP" mappedcolumn="C_DATAITEM_TYP"></Column>
+              <Column name="V_LCL_ID" mappedtable="DATAITEM_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="DATAITEM_TYP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="DATAITEM_TYP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="N_DATAITEM_TYP_DSPLY"></Column>
+          </Columns>
+        </Table>
+        <Table name="FNCTL_DATA_GRP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_FNCTL_DATA_GRP" mappedtable="DATAITEM" mappedcolumn="C_FNCTL_DATA_GRP"></Column>
+              <Column name="N_APP" mappedtable="DATAITEM" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="DATAITEM" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_FNCTL_DATA_GRP"></Column>
+          </Columns>
+        </Table>
+        <Table name="FNCTL_DATA_GRP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_FNCTL_DATA_GRP" mappedtable="FNCTL_DATA_GRP" mappedcolumn="C_FNCTL_DATA_GRP"></Column>
+              <Column name="V_LCL_ID" mappedtable="DATAITEM_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="FNCTL_DATA_GRP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="FNCTL_DATA_GRP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_FNCTL_DATA_GRP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="DATAITEM" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="DATAITEM" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+    <Item name="Expressions">
+      <Tables>
+        <Table name="EXPRSN">
+          <Columns>
+            <Column name="N_EXPRSN"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXPRSN_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_EXPRSN" mappedtable="EXPRSN" mappedcolumn="N_EXPRSN"></Column>
+              <Column name="N_APP" mappedtable="EXPRSN" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXPRSN" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_EXPRSN_DSPLY"></Column>
+            <Column name="T_EXPRSN"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXPRSN_GRP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXPRSN_GRP" mappedtable="EXPRSN" mappedcolumn="C_EXPRSN_GRP"></Column>
+              <Column name="N_APP" mappedtable="EXPRSN" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXPRSN" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_EXPRSN_GRP"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXPRSN_GRP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXPRSN_GRP" mappedtable="EXPRSN_GRP" mappedcolumn="C_EXPRSN_GRP"></Column>
+              <Column name="V_LCL_ID" mappedtable="EXPRSN_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="EXPRSN_GRP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXPRSN_GRP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_EXPRSN_GRP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="EXPRSN" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="EXPRSN" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+    <Item name="ExtensionPoints">
+      <Tables>
+        <Table name="EXTPT">
+          <Columns>
+            <Column name="N_EXTPT"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXTPT_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_EXTPT" mappedtable="EXTPT" mappedcolumn="N_EXTPT"></Column>
+              <Column name="N_APP" mappedtable="EXTPT" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXTPT" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_EXTPT_DSPLY"></Column>
+            <Column name="T_EXTPT"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXTPT_TYP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXTPT_TYP" mappedtable="EXTPT" mappedcolumn="C_EXTPT_TYP"></Column>
+              <Column name="N_APP" mappedtable="EXTPT" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXTPT" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_EXTPT_TYP"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXTPT_TYP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXTPT_TYP" mappedtable="EXTPT_TYP" mappedcolumn="C_EXTPT_TYP"></Column>
+              <Column name="V_LCL_ID" mappedtable="EXTPT_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="EXTPT_TYP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXTPT_TYP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="N_EXTPT_TYP_DSPLY"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXTPT_GRP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXTPT_GRP" mappedtable="EXTPT" mappedcolumn="C_EXTPT_GRP"></Column>
+              <Column name="N_APP" mappedtable="EXTPT" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXTPT" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_EXTPT_GRP"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXTPT_GRP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_EXTPT_GRP" mappedtable="EXTPT_GRP" mappedcolumn="C_EXTPT_GRP"></Column>
+              <Column name="V_LCL_ID" mappedtable="EXTPT_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="EXTPT_GRP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXTPT_GRP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_EXTPT_GRP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="EXTPT" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="EXTPT" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+    <Item name="Pages">
+      <Tables>
+        <Table name="PAGE_CLS">
+          <Columns>
+            <Column name="N_PAGE_CLS"></Column>
+          </Columns>
+        </Table>
+        <Table name="PAGE_CLS_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_PAGE_CLS"  mappedtable="PAGE_CLS" mappedcolumn="N_PAGE_CLS"></Column>
+              <Column name="N_APP" mappedtable="PAGE_CLS" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="PAGE_CLS" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_PAGE_CLS_DSPLY"></Column>
+            <Column name="T_PAGE_CLS"></Column>
+          </Columns>
+        </Table>
+        <Table name="PAGE_CLS_GRP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_PAGE_CLS_GRP"  mappedtable="PAGE_CLS" mappedcolumn="C_PAGE_CLS_GRP"></Column>
+              <Column name="N_APP" mappedtable="PAGE_CLS" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="PAGE_CLS" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_PAGE_CLS_GRP"></Column>
+          </Columns>
+        </Table>
+        <Table name="PAGE_CLS_GRP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_PAGE_CLS_GRP"  mappedtable="PAGE_CLS_GRP" mappedcolumn="C_PAGE_CLS_GRP"></Column>
+              <Column name="V_LCL_ID"  mappedtable="PAGE_CLS_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="PAGE_CLS_GRP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="PAGE_CLS_GRP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_PAGE_CLS_GRP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="PAGE_CLS" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="PAGE_CLS" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+    <Item name="Rules">
+      <Tables>
+        <Table name="RLE">
+          <Columns>
+            <Column name="N_RLE"></Column>
+          </Columns>
+        </Table>
+        <Table name="RLE_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_RLE" mappedtable="RLE" mappedcolumn="N_RLE"></Column>
+              <Column name="N_APP" mappedtable="RLE" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="RLE" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="V_LCL_ID"></Column>
+            <Column name="N_RLE_DSPLY"></Column>
+            <Column name="T_RLE"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXPRSN">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_EXPRSN" mappedtable="RLE" mappedcolumn="N_EXPRSN"></Column>
+              <Column name="N_APP" mappedtable="RLE" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="RLE" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="N_EXPRSN"></Column>
+          </Columns>
+        </Table>
+        <Table name="EXPRSN_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="N_EXPRSN" mappedtable="EXPRSN" mappedcolumn="N_EXPRSN"></Column>
+              <Column name="V_LCL_ID" mappedtable="RLE_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="EXPRSN" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="EXPRSN" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="N_EXPRSN_DSPLY"></Column>
+          </Columns>
+        </Table>
+        <Table name="RLE_GRP">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_RLE_GRP" mappedtable="RLE" mappedcolumn="C_RLE_GRP"></Column>
+              <Column name="N_APP" mappedtable="RLE" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="RLE" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="C_RLE_GRP"></Column>
+          </Columns>
+        </Table>
+        <Table name="RLE_GRP_LCL">
+          <Join type="Inner">
+            <Columns>
+              <Column name="C_RLE_GRP" mappedtable="RLE_GRP" mappedcolumn="C_RLE_GRP"></Column>
+              <Column name="V_LCL_ID" mappedtable="RLE_LCL" mappedcolumn="V_LCL_ID"></Column>
+              <Column name="N_APP" mappedtable="RLE_GRP" mappedcolumn="N_APP"></Column>
+              <Column name="V_APP_VER" mappedtable="RLE_GRP" mappedcolumn="V_APP_VER"></Column>
+            </Columns>
+          </Join>
+          <Columns>
+            <Column name="T_RLE_GRP"></Column>
+          </Columns>
+        </Table>
+      </Tables>
+      <Filters>
+        <Column name="N_APP" table="RLE" value="@applicatioName"></Column>
+        <Column name="V_APP_VER" table="RLE" value="@applicatioVersion"></Column>
+      </Filters>
+    </Item>
+  </Items>
+</ConfigItems>
